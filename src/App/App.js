@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+import Form from '../Form/Form.js'
 import Reservations from '../Reservations/Reservations.js'
+
 import { getReservations } from '../APIControlor.js'
 
 
@@ -17,15 +19,17 @@ class App extends Component {
     this.setState({reservations: reservations})
   };
 
+  makeReservation = (reservation) => {
+    const { reservations } = this.state
+    this.setState({reservations: [...reservations, reservation]})
+  }
+
   render() {
     const { reservations } = this.state
-    console.log(reservations);
     return (
       <section className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
-        <section className='resy-form'>
-
-        </section>
+        <Form  makeReservation={this.makeReservation}/>
         <Reservations reservations={reservations}/>
       </section>
     )
