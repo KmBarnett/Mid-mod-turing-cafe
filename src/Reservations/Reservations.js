@@ -5,9 +5,11 @@ import Card from '../Card/Card.js'
 
 function Reservations({ reservations }) {
     return (
-      <section className="Reservations">
+      <section>
         <h2>Reservations:</h2>
-        {reservations.map(reservation => <Card reservation={reservation} />)}
+        <section className="reservations">
+          {reservations.map(reservation => <Card key={reservation.id} {...reservation} />)}
+        </section>
       </section>
     )
 }
