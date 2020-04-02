@@ -3,8 +3,9 @@ import './Card.css';
 
 function Card() {
     return (
-      <Section className="Card">
-      </Section>
+      <section className="Card">
+        <h4>Card</h4>
+      </section>
     )
 }
 
