@@ -1,7 +1,15 @@
 .reservations {
-  width: 100%;
+  width: 90%;
+  padding: 3%;
+  margin: 0 6%;
   display: flex;
   flex-wrap: wrap;
   height: 500px;
+  justify-content: center;
   overflow: scroll;
+}
+
+.reservations-container {
+  width: 100%;
+  height: 490px;
 }
